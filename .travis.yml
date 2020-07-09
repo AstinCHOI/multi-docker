@@ -8,7 +8,7 @@ before_install:
 
 script:
   # - docker run astinchoi/react-test npm test -- --coverage
-  - docker run -e CI=true USERNAME/react-test npm test
+  - docker run -e CI=true astinchoi/react-test npm test
 
 after_success:
   - docker build -t astinchoi/multi-client ./client
